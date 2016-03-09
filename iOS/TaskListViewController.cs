@@ -9,8 +9,6 @@ namespace ObservableTables.iOS
 {
 	partial class TaskListViewController : UIViewController
 	{
-		//private ObservableTableViewController<TaskModel> tableViewController;
-
 		private TaskListObservableTableViewController<TaskModel> tableViewController;
 
 		private TaskListViewModel Vm => Application.Locator.TaskList;
