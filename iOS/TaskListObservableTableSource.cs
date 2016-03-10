@@ -1,5 +1,4 @@
-﻿using System;
-using UIKit;
+﻿using UIKit;
 using Foundation;
 
 namespace ObservableTables.iOS
@@ -26,10 +25,6 @@ namespace ObservableTables.iOS
 					// remove the item from the underlying data source
 					_controller.DataSource.RemoveAt(indexPath.Row);
 					// No need to delete the row from the table as the tableview is bound to the data source
-					//tableView.DeleteRows (new NSIndexPath[] { indexPath }, UITableViewRowAnimation.Fade);
-					break;
-				case UITableViewCellEditingStyle.None:
-					Console.WriteLine ("CommitEditingStyle:None called");
 					break;
 			}
 		}
