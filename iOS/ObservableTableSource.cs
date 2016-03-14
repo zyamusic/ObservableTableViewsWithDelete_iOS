@@ -11,7 +11,7 @@ namespace ObservableTables.iOS
 	/// </summary>
 	/// <typeparam name="T2">The type of the items that the data source contains.</typeparam>
 	/// <remarks>In the current implementation, only one section is supported.</remarks>
-	public class ObservableTableSource<T2> : UITableViewSource
+	/*protected*/ public class ObservableTableSource<T2> : UITableViewSource
 	{
 		/*private*/ protected readonly ObservableTableViewController<T2> _controller;
 		private readonly NSString _reuseId = new NSString("C");
