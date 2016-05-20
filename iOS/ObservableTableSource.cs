@@ -33,8 +33,15 @@ namespace ObservableTables.iOS
 		/// <returns>The created or recycled cell.</returns>
 		public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 		{
-			var cell = tableView.DequeueReusableCell(_reuseId) ??
-				_controller.CreateCell(_reuseId);
+			var cell = tableView.DequeueReusableCell(_reuseId);
+			if (cell == null)
+			{
+				cell = _controller.CreateCell(_reuseId);
+			}
+			else
+			{
+				Console.WriteLine("reusing cell");
+			}
 
 			try
 			{

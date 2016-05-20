@@ -10,6 +10,7 @@ namespace ObservableTables.ViewModel
             ServiceLocator.SetLocatorProvider(() => SimpleIoc.Default);
 
             SimpleIoc.Default.Register<TaskListViewModel>();
+			SimpleIoc.Default.Register<TaskModel>();
         }
 
 		public TaskListViewModel TaskList
@@ -17,6 +18,14 @@ namespace ObservableTables.ViewModel
             get
             {
                 return ServiceLocator.Current.GetInstance<TaskListViewModel>();
+            }
+        }
+
+		public TaskModel TaskModel
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<TaskModel>();
             }
         }
         
